@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import 'reset.css';
+import GlobalProvider from '../styles/GlobalProvider';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <GlobalProvider>
+      <Component {...pageProps} />
+    </GlobalProvider>
+  )
 }
 
 export default MyApp
