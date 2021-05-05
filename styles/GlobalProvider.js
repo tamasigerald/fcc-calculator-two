@@ -30,7 +30,10 @@ function GlobalProvider(props) {
         <GlobalContext.Provider
         value={{
             dark,
-            changeTheme: () => setTheme(dark ? false : true)
+            changeTheme: () => {
+        setTheme(dark ? false : true);
+         window.localStorage.setItem('local-theme', ${`dark ? 'dark' : 'light'`});
+         }
         }}>
             <ThemeProvider theme={dark ? darkTheme : lightTheme}>
                 <GlobalStyles />
