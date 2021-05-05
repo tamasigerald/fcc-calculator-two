@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const shared = {
     fonts: {
@@ -10,7 +10,7 @@ const lightTheme = {
     ...shared,
     colors: {
         body: '#fafafa',
-        text: '#333,',
+        text: '#333',
         primary: '#fdca40',
         secondary: '#7d8491',
         red: '#c1292e',
@@ -22,10 +22,10 @@ const darkTheme = {
     colors: {
         body: '#333',
         text: '#fafafa',
-        primary: '#fdca40',
+        primary: '#dba718',
         secondary: '#7d8491',
-        red: '#c1292e',
+        red: '#b31217',
     }
 }
 
-export {styled, createGlobalStyle, lightTheme, darkTheme};
+export { createGlobalStyle, lightTheme, darkTheme };
