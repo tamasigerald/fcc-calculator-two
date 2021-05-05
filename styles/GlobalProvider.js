@@ -22,6 +22,11 @@ function GlobalProvider(props) {
         }
     }
 
+    const changeTheme = () => {
+        setTheme(dark ? false : true);
+        window.localStorage.setItem('local-theme', `${dark ? 'light' : 'dark'}`);
+    }
+
     useEffect(() => {
         checkLocalTheme();
     }, [])
@@ -30,10 +35,7 @@ function GlobalProvider(props) {
         <GlobalContext.Provider
         value={{
             dark,
-            changeTheme: () => {
-        setTheme(dark ? false : true);
-         window.localStorage.setItem('local-theme', ${`dark ? 'dark' : 'light'`});
-         }
+            changeTheme
         }}>
             <ThemeProvider theme={dark ? darkTheme : lightTheme}>
                 <GlobalStyles />
